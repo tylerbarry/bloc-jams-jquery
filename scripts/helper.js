@@ -6,6 +6,4 @@ class Helper {
   }
 };
 
-var helper = Helper;
-
-$('player.playPause').replaceAll('helper.playPauseAndUpdate');
+var helper = new Helper;
