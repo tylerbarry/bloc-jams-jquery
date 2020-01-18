@@ -1,9 +1,11 @@
 class Helper {
-  playPauseAndUpdate(song) {
+  playPauseAndUpdate(song){
+    const duration = player.getDuration();
     player.playPause(song);
-    const duration = player.currrentlyPlaying.getDuration();
-    $('#time-control .total-time').text( duration );
+    $('#time-control .total-time').text(
+      player.prettyTime( duration )
+    );
   }
-};
+}
 
-var helper = new Helper;
+const helper = new Helper();

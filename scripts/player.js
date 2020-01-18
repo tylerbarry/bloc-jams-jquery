@@ -47,6 +47,16 @@ class Player {
     this.volume = percent;
     this.soundObject.setVolume(percent);
   }
+
+  prettyTime (timeInSeconds) {
+    let s = Math.floor(timeInSeconds);
+    let m = Math.floor(s/60);
+    s -= m*60;
+
+    return m+":"+(s < 10 ? '0'+s : s)
+  }
+
+
 }
 
 const player = new Player();
